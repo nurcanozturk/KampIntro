@@ -1,48 +1,35 @@
 ﻿using System;
 
-namespace Methodlar
+namespace Döngüler
 {
     class Program
     {
         static void Main(string[] args)
         {
-           
+            string kurs1 = "Yazılım Geliştirici Yetiştirme Kampı";
+            string kurs2 = "Programlamaya Baslangıc Icın Temel Kurs";
+            string kurs3 = "Java";
 
-            Product product1 = new Product();
-            product1.Adi = "Elma";
-            product1.Fiyatı = 15;
-            product1.Aciklama = "Amasya Elması";
+            //array
+            
+            string[] kurslar = new string[] { "Yazılım Geliştirici Yetiştirme Kampı", 
+                "Programlamaya Baslangıc Icın Temel Kurs" ,
+                "Java", "python","c#"};          
 
-            Product product2 = new Product();
-            product2.Adi = "Karpuz";
-            product2.Fiyatı = 25;
-            product2.Aciklama = "diyarbakır Karpuzu";
 
-            Product[] products = new Product[] { product1, product2 };
 
-            foreach (Product product in products)
+            for (int i = 0; i < kurslar.Length; i++)
             {
-                Console.WriteLine(product.Adi);
-                Console.WriteLine(product.Fiyatı);
-                Console.WriteLine(product.Aciklama);
-                Console.WriteLine("-----------------");
+                Console.WriteLine(kurslar[i]);
             }
 
-            Console.WriteLine("--------Methodlar------");
-            SepetManager sepetManager = new SepetManager();
-            sepetManager.Ekle(product1);
-            sepetManager.Ekle(product2);
+            Console.WriteLine("for bitti");
+            foreach (string kurs in kurslar)
+            {
+                Console.WriteLine(kurs);
+            }
 
-            sepetManager.Ekle2("armut","yesıl armut",12,45);
-            sepetManager.Ekle2("elma","yesil elma",12,14);
-            sepetManager.Ekle2("karpuz","diyarbakır",12,4);
-
-
-
-
+            Console.WriteLine("sayfa sonu = footer");
         }
     }
 }
-
-
-
